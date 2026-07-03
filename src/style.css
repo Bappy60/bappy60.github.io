@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* Class-based dark mode: <html class="dark"> or <html class="light"> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* --- Color tokens (Technical Precision palette) --- */
+  --color-background: #0c1324;
+  --color-surface: #0c1324;
+  --color-surface-dim: #0c1324;
+  --color-surface-bright: #33394c;
+  --color-surface-container-lowest: #070d1f;
+  --color-surface-container-low: #151b2d;
+  --color-surface-container: #191f31;
+  --color-surface-container-high: #23293c;
+  --color-surface-container-highest: #2e3447;
+  --color-surface-variant: #2e3447;
+
+  --color-on-background: #dce1fb;
+  --color-on-surface: #dce1fb;
+  --color-on-surface-variant: #a9b1c9;
+
+  --color-outline: #5b6478;
+  --color-outline-variant: #3d4a3d;
+
+  --color-primary: #4be277;
+  --color-on-primary: #003915;
+  --color-primary-container: #22c55e;
+
+  --color-secondary: #7bd0ff;
+  --color-on-secondary: #00354a;
+  --color-secondary-container: #00a6e0;
+
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+
+  /* --- Light mode counterpoint --- */
+  --color-light-background: #f7f9fb;
+  --color-light-surface-container: #ffffff;
+  --color-light-on-background: #191c1e;
+  --color-light-outline: #e2e8f0;
+
+  /* --- Typography --- */
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* --- Layout --- */
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 64px;
+  --spacing-gutter: 24px;
+  --container-max-width: 1280px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+html.light body {
+  background-color: var(--color-light-background);
+  color: var(--color-light-on-background);
+}
+
+::selection {
+  background-color: var(--color-primary-container);
+  color: #002109;
+}
+
+/* Reveal-on-scroll: JS toggles .is-visible; no-JS / reduced-motion always visible */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Visible keyboard focus everywhere, styled to match the terminal accent */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
