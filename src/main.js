@@ -39,6 +39,17 @@ function renderHero() {
   document.getElementById('hero-subtext').textContent = hero.subtext
   document.getElementById('profile-status').textContent = profile.currentStatus
 
+  const photo = document.getElementById('profile-photo')
+  if (photo) {
+    photo.src = profile.photo || photo.src
+    photo.alt = profile.photoAlt || `${profile.name} profile photo`
+  }
+
+  const downloadButton = document.getElementById('download-cv-button')
+  if (downloadButton) {
+    downloadButton.href = profile.links.resume
+  }
+
   const interestsWrap = document.getElementById('profile-interests')
   profile.coreInterests.forEach((interest) => {
     interestsWrap.append(el('span', 'border border-primary/60 text-primary px-2 py-1 font-mono text-[12px]', interest))
@@ -56,7 +67,10 @@ function renderExperience() {
     const item = el('li', 'reveal border-l-2 border-surface-variant hover:border-primary pl-8 transition-colors')
 
     const header = el('div', 'flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-3')
-    header.append(el('h3', 'font-mono text-xl font-semibold text-on-background', `${job.role} · ${job.company}`))
+    const titleWrap = el('div', 'flex flex-col')
+    titleWrap.append(el('h3', 'font-mono text-xl font-semibold text-on-background', job.company))
+    titleWrap.append(el('p', 'font-mono text-sm text-on-surface-variant', job.role))
+    header.append(titleWrap)
     header.append(el('span', 'font-mono text-xs text-outline whitespace-nowrap', job.period))
     item.append(header)
 

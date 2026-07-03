@@ -1,236 +1,245 @@
 <!doctype html>
 <html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Kawsar Ahemmed Bappy — Geospatial &amp; Distributed Systems Engineer</title>
-    <meta
-      name="description"
-      content="Software engineer building open-source geospatial infrastructure (geocoding, routing, map data pipelines) and researching dialectal Bengali speech recognition."
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>Kawsar Ahemmed Bappy — Geospatial &amp; Distributed Systems Engineer</title>
+  <meta name="description"
+    content="Software engineer building open-source geospatial infrastructure (geocoding, routing, map data pipelines) and researching dialectal Bengali speech recognition." />
 
-    <script type="module" src="/src/main.js"></script>
-  </head>
-  <body class="font-sans transition-colors duration-300 overflow-x-hidden">
-    <a
-      href="#main-content"
-      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-on-primary focus:px-4 focus:py-2 focus:rounded"
-    >
-      Skip to content
-    </a>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- ============================= NAV ============================= -->
-    <div class="fixed top-0 left-0 right-0 z-50 px-margin-mobile pt-6 pointer-events-none">
-      <nav
-        class="max-w-[var(--container-max-width)] mx-auto bg-background/70 dark:bg-background/70 backdrop-blur-md border border-surface-variant/50 rounded-full shadow-2xl pointer-events-auto"
-        aria-label="Primary"
-      >
-        <div class="px-6 md:px-10 flex justify-between items-center h-16">
-          <a href="#top" class="font-mono text-[18px] font-bold text-on-background flex items-center gap-2">
-            <span class="text-primary">&lt;/&gt;</span>
-            <span class="hidden sm:inline">Kawsar A. Bappy</span>
-            <span class="sm:hidden">K.A.B.</span>
-          </a>
+  <script type="module" src="/src/main.js"></script>
+</head>
 
-          <div class="hidden md:flex gap-8 items-center absolute left-1/2 -translate-x-1/2">
-            <a class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors" href="#experience">Experience</a>
-            <a class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a>
-            <a class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors" href="#research">Research</a>
-            <a class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors" href="#journal">Journal</a>
-          </div>
+<body class="font-sans transition-colors duration-300 overflow-x-hidden">
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-on-primary focus:px-4 focus:py-2 focus:rounded">
+    Skip to content
+  </a>
 
-          <div class="flex items-center gap-2 md:gap-4">
-            <button
-              id="theme-toggle"
-              type="button"
-              aria-label="Toggle color theme"
-              class="p-2 text-on-surface-variant hover:text-primary transition-colors"
-            >
-              <svg id="icon-dark" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-              <svg id="icon-light" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
-            </button>
-            <a
-              id="resume-link"
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener"
-              class="hidden md:inline-flex px-4 py-2 border border-primary/50 text-primary font-mono text-[10px] tracking-widest uppercase hover:bg-primary/10 hover:border-primary transition-all rounded-full"
-              >Resume</a
-            >
-            <a
-              id="contact-link"
-              href="mailto:kawsar.swe.sust@gmail.com"
-              class="px-5 py-2 bg-primary text-on-primary font-mono text-[10px] tracking-widest uppercase hover:brightness-110 transition-all rounded-full"
-              >Contact</a
-            >
-            <button id="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" class="md:hidden text-primary ml-1 p-1">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
-          </div>
+  <!-- ============================= NAV ============================= -->
+  <div class="fixed top-0 left-0 right-0 z-50 px-margin-mobile pt-6 pointer-events-none">
+    <nav
+      class="max-w-[var(--container-max-width)] mx-auto bg-background/70 dark:bg-background/70 backdrop-blur-md border border-surface-variant/50 rounded-full shadow-2xl pointer-events-auto"
+      aria-label="Primary">
+      <div class="px-6 md:px-10 flex justify-between items-center h-16">
+        <a href="#top" class="font-mono text-[18px] font-bold text-on-background flex items-center gap-2">
+          <span class="text-primary">&lt;/&gt;</span>
+          <span class="hidden sm:inline">Kawsar Ahemmed Bappy</span>
+          <span class="sm:hidden">Kawsar Ahemmed Bappy</span>
+        </a>
+
+        <div class="hidden md:flex gap-8 items-center absolute left-1/2 -translate-x-1/2">
+          <a class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors"
+            href="#experience">Experience</a>
+          <a class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors"
+            href="#projects">Projects</a>
+          <a class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors"
+            href="#research">Research</a>
+          <a class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors"
+            href="#journal">Journal</a>
         </div>
 
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden flex-col gap-1 px-6 pb-6 pt-2">
-          <a class="py-2 font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary" href="#experience">Experience</a>
-          <a class="py-2 font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary" href="#projects">Projects</a>
-          <a class="py-2 font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary" href="#research">Research</a>
-          <a class="py-2 font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary" href="#journal">Journal</a>
-          <a class="py-2 font-mono text-xs tracking-widest uppercase text-primary" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
-        </div>
-      </nav>
-    </div>
-
-    <main id="main-content">
-      <!-- ============================= HERO ============================= -->
-      <section id="top" class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop pt-40 pb-32">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-          <div class="md:col-span-8 flex flex-col gap-8">
-            <div class="flex items-center gap-3">
-              <span class="h-px w-8 bg-primary"></span>
-              <span id="hero-eyebrow" class="font-mono text-sm text-primary uppercase tracking-widest"></span>
-            </div>
-            <h1 id="hero-headline" class="font-mono text-[40px] md:text-[72px] leading-[1.05] font-bold text-on-background"></h1>
-            <div class="max-w-2xl space-y-6">
-              <p id="hero-subtext" class="text-lg text-on-surface-variant leading-relaxed"></p>
-              <div class="flex flex-wrap gap-4 pt-4">
-                <a
-                  href="mailto:kawsar.swe.sust@gmail.com"
-                  class="px-8 py-4 bg-primary text-on-primary font-mono text-xs tracking-widest uppercase hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all"
-                  >Get in touch</a
-                >
-                <a
-                  href="#projects"
-                  class="px-8 py-4 border border-outline text-on-surface font-mono text-xs tracking-widest uppercase hover:border-primary hover:text-primary transition-all"
-                  >See projects</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="md:col-span-4 relative">
-            <div class="bg-surface-container p-8 border border-surface-variant relative overflow-hidden">
-              <span class="font-mono text-xs text-primary block mb-6">$ cat profile.json</span>
-              <div class="space-y-6">
-                <div>
-                  <span class="font-mono text-xs text-outline block mb-2">CURRENT_STATUS</span>
-                  <p id="profile-status" class="text-on-surface"></p>
-                </div>
-                <div>
-                  <span class="font-mono text-xs text-outline block mb-2">CORE_INTERESTS</span>
-                  <div id="profile-interests" class="flex flex-wrap gap-2"></div>
-                </div>
-                <div>
-                  <span class="font-mono text-xs text-outline block mb-2">LOCATION</span>
-                  <p class="text-on-surface">Dhaka, Bangladesh</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================= EXPERIENCE ============================= -->
-      <section id="experience" class="bg-surface-container-lowest py-32 border-y border-surface-variant">
-        <div class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop">
-          <div class="flex items-center gap-4 mb-16">
-            <h2 class="font-mono text-3xl font-semibold text-on-background">Experience</h2>
-            <div class="h-px flex-grow bg-outline-variant/30"></div>
-          </div>
-          <ol id="experience-list" class="flex flex-col gap-16"></ol>
-        </div>
-      </section>
-
-      <!-- ============================= PROJECTS ============================= -->
-      <section id="projects" class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop py-32">
-        <div class="flex items-center gap-4 mb-16">
-          <h2 class="font-mono text-3xl font-semibold text-on-background">Projects</h2>
-          <div class="h-px flex-grow bg-outline-variant/30"></div>
-        </div>
-        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-      </section>
-
-      <!-- ============================= RESEARCH + JOURNAL ============================= -->
-      <section class="bg-surface-container-lowest py-32 border-y border-surface-variant">
-        <div class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
-            <div id="research" class="md:col-span-7 flex flex-col gap-12">
-              <div class="flex items-center gap-4">
-                <h2 class="font-mono text-2xl font-semibold text-on-background">Research</h2>
-                <div class="h-px flex-grow bg-outline-variant/30"></div>
-              </div>
-              <div id="research-list" class="flex flex-col gap-10"></div>
-            </div>
-
-            <div id="journal" class="md:col-span-5 flex flex-col gap-12 md:pl-12 md:border-l border-surface-variant">
-              <div class="flex items-center gap-4">
-                <h2 class="font-mono text-2xl font-semibold text-on-background">Journal</h2>
-                <div class="h-px flex-grow bg-outline-variant/30"></div>
-              </div>
-              <div id="journal-list" class="space-y-10"></div>
-              <p class="font-mono text-xs text-outline">
-                Posts marked <span class="text-primary">DRAFT</span> are placeholders — edit
-                <code class="text-secondary">src/content.js</code> once they're written.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================= CURRENTLY ============================= -->
-      <section class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop py-32">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
-          <div class="md:col-span-5">
-            <h2 class="font-mono text-3xl font-semibold text-on-background mb-4">Currently</h2>
-            <p class="text-on-surface-variant leading-relaxed">
-              What I'm spending most of my working hours on right now.
-            </p>
-          </div>
-          <ul id="currently-list" class="md:col-span-7 space-y-6 font-mono text-sm"></ul>
-        </div>
-      </section>
-
-      <!-- ============================= SKILLS ============================= -->
-      <section class="bg-surface-container-lowest py-32 border-y border-surface-variant">
-        <div class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop">
-          <div class="flex items-center gap-4 mb-16">
-            <h2 class="font-mono text-3xl font-semibold text-on-background">Skills</h2>
-            <div class="h-px flex-grow bg-outline-variant/30"></div>
-          </div>
-          <div id="skills-grid" class="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10"></div>
-        </div>
-      </section>
-
-      <!-- ============================= EDUCATION ============================= -->
-      <section class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop py-32">
-        <div class="flex items-center gap-4 mb-12">
-          <h2 class="font-mono text-3xl font-semibold text-on-background">Education</h2>
-          <div class="h-px flex-grow bg-outline-variant/30"></div>
-        </div>
-        <div id="education-card" class="border-l-2 border-surface-variant pl-8 py-2"></div>
-      </section>
-    </main>
-
-    <!-- ============================= FOOTER ============================= -->
-    <footer class="w-full py-16 bg-surface-container-lowest border-t border-surface-variant">
-      <div class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8">
-        <div class="flex flex-col gap-2 text-center md:text-left">
-          <span class="font-mono text-lg font-bold text-on-background">Kawsar Ahemmed Bappy</span>
-          <p class="font-mono text-xs text-outline">Dhaka, Bangladesh · kawsar.swe.sust@gmail.com</p>
-        </div>
-        <div class="flex gap-8">
-          <a id="footer-linkedin" class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-all" href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <a id="footer-github" class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-all" href="#" target="_blank" rel="noopener">GitHub</a>
-          <a class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-all" href="mailto:kawsar.swe.sust@gmail.com">Email</a>
+        <div class="flex items-center gap-2 md:gap-4">
+          <button id="theme-toggle" type="button" aria-label="Toggle color theme"
+            class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+            <svg id="icon-dark" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+            <svg id="icon-light" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" />
+            </svg>
+          </button>
+          <a id="resume-link" href="/resume.pdf" target="_blank" rel="noopener"
+            class="hidden md:inline-flex px-4 py-2 border border-primary/50 text-primary font-mono text-[10px] tracking-widest uppercase hover:bg-primary/10 hover:border-primary transition-all rounded-full">Resume</a>
+          <a id="contact-link" href="mailto:kawsar.swe.sust@gmail.com"
+            class="px-5 py-2 bg-primary text-on-primary font-mono text-[10px] tracking-widest uppercase hover:brightness-110 transition-all rounded-full">Contact</a>
+          <button id="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+            class="md:hidden text-primary ml-1 p-1">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </div>
-    </footer>
-  </body>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden flex-col gap-1 px-6 pb-6 pt-2">
+        <a class="py-2 font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary"
+          href="#experience">Experience</a>
+        <a class="py-2 font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary"
+          href="#projects">Projects</a>
+        <a class="py-2 font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary"
+          href="#research">Research</a>
+        <a class="py-2 font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary"
+          href="#journal">Journal</a>
+        <a class="py-2 font-mono text-xs tracking-widest uppercase text-primary" href="/resume.pdf" target="_blank"
+          rel="noopener">Resume</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <!-- ============================= HERO ============================= -->
+    <section id="top"
+      class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop pt-40 pb-32">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-8 flex flex-col gap-8">
+          <div class="flex items-center gap-3">
+            <span class="h-px w-8 bg-primary"></span>
+            <span id="hero-eyebrow" class="font-mono text-sm text-primary uppercase tracking-widest"></span>
+          </div>
+          <h1 id="hero-headline"
+            class="font-mono text-[40px] md:text-[72px] leading-[1.05] font-bold text-on-background"></h1>
+          <div class="max-w-2xl space-y-6">
+            <p id="hero-subtext" class="text-lg text-on-surface-variant leading-relaxed"></p>
+            <div class="flex flex-wrap gap-4 pt-4">
+              <a href="mailto:kawsar.swe.sust@gmail.com"
+                class="px-8 py-4 bg-primary text-on-primary font-mono text-xs tracking-widest uppercase hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all">Get
+                in touch</a>
+              <a href="#projects"
+                class="px-8 py-4 border border-outline text-on-surface font-mono text-xs tracking-widest uppercase hover:border-primary hover:text-primary transition-all">See
+                projects</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-4 relative">
+          <div class="bg-surface-container p-8 border border-surface-variant relative overflow-hidden">
+            <span class="font-mono text-xs text-primary block mb-6">$ cat profile.json</span>
+            <div class="space-y-6">
+              <img id="profile-photo" class="profile-photo" src="/profile.jpg" alt="Profile photo" />
+              <div>
+                <span class="font-mono text-xs text-outline block mb-2">CURRENT_STATUS</span>
+                <p id="profile-status" class="text-on-surface"></p>
+              </div>
+              <div>
+                <span class="font-mono text-xs text-outline block mb-2">CORE_INTERESTS</span>
+                <div id="profile-interests" class="flex flex-wrap gap-2"></div>
+              </div>
+              <div>
+                <span class="font-mono text-xs text-outline block mb-2">LOCATION</span>
+                <p class="text-on-surface">Dhaka, Bangladesh</p>
+              </div>
+              <a id="download-cv-button" href="/resume.pdf" download
+                class="inline-flex w-full justify-center px-4 py-3 bg-primary text-on-primary font-mono text-xs tracking-widest uppercase hover:shadow-[0_0_20px_rgba(34,197,94,0.25)] transition-all rounded-full">Download
+                CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= EXPERIENCE ============================= -->
+    <section id="experience" class="bg-surface-container-lowest py-32 border-y border-surface-variant">
+      <div class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="flex items-center gap-4 mb-16">
+          <h2 class="font-mono text-3xl font-semibold text-on-background">Experience</h2>
+          <div class="h-px flex-grow bg-outline-variant/30"></div>
+        </div>
+        <ol id="experience-list" class="flex flex-col gap-16"></ol>
+      </div>
+    </section>
+
+    <!-- ============================= PROJECTS ============================= -->
+    <section id="projects"
+      class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop py-32">
+      <div class="flex items-center gap-4 mb-16">
+        <h2 class="font-mono text-3xl font-semibold text-on-background">Projects</h2>
+        <div class="h-px flex-grow bg-outline-variant/30"></div>
+      </div>
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+    </section>
+
+    <!-- ============================= RESEARCH + JOURNAL ============================= -->
+    <section class="bg-surface-container-lowest py-32 border-y border-surface-variant">
+      <div class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+          <div id="research" class="md:col-span-7 flex flex-col gap-12">
+            <div class="flex items-center gap-4">
+              <h2 class="font-mono text-2xl font-semibold text-on-background">Research</h2>
+              <div class="h-px flex-grow bg-outline-variant/30"></div>
+            </div>
+            <div id="research-list" class="flex flex-col gap-10"></div>
+          </div>
+
+          <div id="journal" class="md:col-span-5 flex flex-col gap-12 md:pl-12 md:border-l border-surface-variant">
+            <div class="flex items-center gap-4">
+              <h2 class="font-mono text-2xl font-semibold text-on-background">Journal</h2>
+              <div class="h-px flex-grow bg-outline-variant/30"></div>
+            </div>
+            <div id="journal-list" class="space-y-10"></div>
+            <p class="font-mono text-xs text-outline">
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= CURRENTLY ============================= -->
+    <section class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop py-32">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+        <div class="md:col-span-5">
+          <h2 class="font-mono text-3xl font-semibold text-on-background mb-4">Currently</h2>
+          <p class="text-on-surface-variant leading-relaxed">
+            What I'm spending most of my working hours on right now.
+          </p>
+        </div>
+        <ul id="currently-list" class="md:col-span-7 space-y-6 font-mono text-sm"></ul>
+      </div>
+    </section>
+
+    <!-- ============================= SKILLS ============================= -->
+    <section class="bg-surface-container-lowest py-32 border-y border-surface-variant">
+      <div class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="flex items-center gap-4 mb-16">
+          <h2 class="font-mono text-3xl font-semibold text-on-background">Skills</h2>
+          <div class="h-px flex-grow bg-outline-variant/30"></div>
+        </div>
+        <div id="skills-grid" class="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10"></div>
+      </div>
+    </section>
+
+    <!-- ============================= EDUCATION ============================= -->
+    <section class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop py-32">
+      <div class="flex items-center gap-4 mb-12">
+        <h2 class="font-mono text-3xl font-semibold text-on-background">Education</h2>
+        <div class="h-px flex-grow bg-outline-variant/30"></div>
+      </div>
+      <div id="education-card" class="border-l-2 border-surface-variant pl-8 py-2"></div>
+    </section>
+  </main>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="w-full py-16 bg-surface-container-lowest border-t border-surface-variant">
+    <div
+      class="max-w-[var(--container-max-width)] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="flex flex-col gap-2 text-center md:text-left">
+        <span class="font-mono text-lg font-bold text-on-background">Kawsar Ahemmed Bappy</span>
+        <p class="font-mono text-xs text-outline">Dhaka, Bangladesh · kawsar.swe.sust@gmail.com</p>
+      </div>
+      <div class="flex gap-8">
+        <a id="footer-linkedin"
+          class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-all"
+          href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a id="footer-github"
+          class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-all"
+          href="#" target="_blank" rel="noopener">GitHub</a>
+        <a class="font-mono text-xs tracking-widest uppercase text-on-surface-variant hover:text-primary transition-all"
+          href="mailto:kawsar.swe.sust@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

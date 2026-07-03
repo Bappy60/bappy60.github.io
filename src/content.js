@@ -11,13 +11,14 @@ export const profile = {
   email: 'kawsar.swe.sust@gmail.com',
   phone: '+880 1864356300',
   location: 'Dhaka, Bangladesh',
-  // TODO: replace with your real profile URLs
   links: {
-    github: 'https://github.com/your-username',
-    linkedin: 'https://linkedin.com/in/your-username',
+    github: 'https://github.com/Bappy60',
+    linkedin: 'https://www.linkedin.com/in/kawsar-ahemmmed-bappy/',
     resume: '/resume.pdf',
   },
-  currentStatus: 'Software Engineer @ Technonext — Core Map Services',
+  currentStatus: 'Software Engineer — Core Map Services',
+  photo: '/profile.jpg',
+  photoAlt: 'Profile photo',
   coreInterests: ['Geospatial Systems', 'Distributed Systems', 'Low-Resource NLP'],
 }
 
@@ -31,77 +32,77 @@ export const hero = {
 // Reverse-chronological. `highlights` renders as a short bullet list.
 export const experience = [
   {
-    company: 'Technonext Software Limited',
-    role: 'Software Engineer (Mid)',
+    company: 'Core Map Services',
+    role: 'Software Engineer',
     period: 'July 2025 — Present',
     location: 'Dhaka, Bangladesh',
     highlights: [
-      'Delivered geospatial APIs (geocode, reverse-geocode, radius search, autocomplete) for MapNest, integrating Elasticsearch with OSM/OSRM/Nominatim at sub-100ms p99 latency across 1.3M+ records.',
-      'Cut Autocomplete query latency 87% and index size 30% through Elasticsearch field filtering and usage analysis.',
-      'Built Geo-Syncer, an async CDC pipeline (PostgreSQL triggers + RabbitMQ) that replaced a 1-hour manual sync workflow with 99.9%-consistent automated syncing.',
-      'Architected a centralized User Management & RBAC service in Go (gRPC, OIDC/OAuth2, JWT reuse detection, Redis bitmap authorization), cutting permission-check latency 60% across 5+ platforms.',
-      'Led internal knowledge-sharing sessions on Redis, Go design, and PostgreSQL internals; mentored new engineers on clean architecture and production debugging.',
+      'Delivered geospatial APIs for search, reverse geocoding, autocomplete, and radius queries with sub-100ms p99 latency across millions of records.',
+      'Reduced query latency by optimizing Elasticsearch indexing, field filtering, and relevance scoring.',
+      'Built an asynchronous CDC pipeline with PostgreSQL triggers and RabbitMQ to replace an hourly manual sync workflow with automated consistency.',
+      'Designed a centralized authorization service in Go using gRPC, OIDC/OAuth2, JWT handling, and Redis-backed RBAC for low-latency access checks.',
+      'Ran knowledge-sharing sessions on distributed systems, database internals, and clean architecture for engineering teammates.',
     ],
   },
   {
-    company: 'Vivasoft Limited',
-    role: 'Software Engineer (L-1)',
+    company: 'Engineering Platform Team',
+    role: 'Software Engineer',
     period: 'March 2024 — July 2025',
     location: 'Dhaka, Bangladesh',
     highlights: [
-      'Built an AI-powered job crawler (Python/FastAPI, Go/Gin) for WeSelect using a hybrid GPT-3.5/GPT-4o pipeline — 1,000+ listings/day at 40% lower cost than third-party tools.',
-      'Refactored the Pi-Inventory codebase onto clean architecture, cutting code volume 30–40% and onboarding time along with it.',
-      'Improved response times 20–30% across services via Redis caching, N+1 fixes, and GORM query tuning.',
-      'Cut deployment time from 45 to 8 minutes by containerizing services and streamlining CI/CD.',
-      'Led the Financfy Flutter migration (3.10 → 3.24.5), fixing 50+ breaking changes and implementing type-safe RBAC with BLoC.',
+      'Built an AI-powered data extraction service using Python/FastAPI and Go/Gin, processing thousands of listings daily with lower operating cost than external alternatives.',
+      'Refactored a legacy codebase onto clean architecture, reducing complexity and speeding new engineer onboarding.',
+      'Improved service response times through Redis caching, query tuning, and N+1 issue resolution.',
+      'Shrank deployment time by containerizing services and streamlining CI/CD pipelines.',
+      'Led a cross-platform migration of a Flutter app, resolving breaking changes while preserving type-safe authorization workflows.',
     ],
   },
   {
-    company: 'Vivasoft Limited',
+    company: 'Platform Engineering',
     role: 'Associate Software Engineer',
     period: 'February 2023 — March 2024',
     location: 'Dhaka, Bangladesh',
     highlights: [
-      'Built RESTful inventory management APIs in Go/Gin; resolved 30+ production bugs, improving system stability.',
-      'Contributed to an open-source Golang Bootcamp in Bangla, writing beginner-friendly docs to lower the learning curve for new Go developers.',
+      'Built RESTful inventory management APIs in Go/Gin and resolved production issues to improve stability.',
+      'Contributed to an open-source educational initiative by writing beginner-friendly Go documentation in Bangla.',
     ],
   },
 ]
 
 export const projects = [
   {
-    name: 'MapNest Geospatial Platform',
+    name: 'Geospatial Search Platform',
     stack: ['Go', 'Elasticsearch', 'OSM', 'OSRM', 'Nominatim', 'gRPC'],
     description:
-      'Production mapping platform serving geocoding and location search to internal applications org-wide. Custom Elasticsearch spatial indexing with relevance scoring, Haversine-based radius search, and a circuit-breaker fallback across OSM and Google Places for 99.9% availability.',
+      'A mapping service supporting geocoding and location search for internal products. It uses spatial indexing, relevance scoring, radius search, and a circuit-breaker fallback across multiple data sources.',
     link: null,
   },
   {
-    name: 'Geo-Syncer',
+    name: 'Async Data Sync Pipeline',
     stack: ['Go', 'PostgreSQL', 'RabbitMQ', 'Elasticsearch', 'CDC'],
     description:
-      'Event-driven sync pipeline keeping Elasticsearch consistent with PostgreSQL as source of truth. Trigger-based change data capture avoids polling; idempotent, versioned handlers keep out-of-order messages from corrupting state.',
+      'An event-driven pipeline maintaining search index consistency with source-of-truth data. Trigger-based change capture avoids polling, while idempotent handlers prevent out-of-order updates.',
     link: null,
   },
   {
-    name: 'Foodi Mart',
+    name: 'Distributed Fulfillment Services',
     stack: ['Go', 'gRPC', 'RabbitMQ', 'PostgreSQL', 'Docker'],
     description:
-      'Distributed microservices for inventory and order fulfillment. Saga pattern across Order/Inventory/Payment for eventual consistency, dead-letter queues for fault tolerance, and optimistic-locked inventory reservations to prevent overselling under load.',
+      'Microservices supporting inventory and order fulfillment. The design uses saga-like coordination, dead-letter queues, and optimistic locking to preserve consistency under load.',
     link: null,
   },
   {
-    name: 'WeSelect AI Job Crawler',
+    name: 'AI Data Extraction Service',
     stack: ['Python', 'FastAPI', 'Go', 'Gin', 'OpenAI'],
     description:
-      'Career-intelligence crawler extracting structured job data at scale. Concurrent Go crawler with rate limiting and anti-bot handling, hybrid GPT-3.5/GPT-4o extraction, structured prompting pulling 15+ attributes at 92% accuracy.',
+      'A structured crawler for large-scale data extraction. It combines rate limiting, anti-bot handling, and hybrid model prompting to produce accurate data from noisy sources.',
     link: null,
   },
   {
-    name: 'Financfy SaaS Suite',
+    name: 'SaaS Backend and Mobile Client',
     stack: ['Go', 'Flutter', 'BLoC', 'Redis', 'Firebase'],
     description:
-      'Multi-tenant financial management platform for SMEs. Hierarchical RBAC with permission inheritance, clean-architecture backend modules, and a Flutter/BLoC mobile client with permission-based route guards.',
+      'A multi-tenant SaaS suite for small business operations, featuring hierarchical access control, clean backend architecture, and a Flutter/BLoC mobile interface.',
     link: null,
   },
 ]
@@ -110,11 +111,11 @@ export const projects = [
 export const research = [
   {
     tag: 'B.Sc. THESIS — SUST',
-    title: 'Does Whisper Generalize to Dialectal Bengali?',
+    title: 'Bridging the Gap: Evaluating State-of-the-Art Speech-to-Text Models for Sylheti Dialect and Introducing a Bengali Speech-to-Text API',
     description:
-      'Evaluated whether state-of-the-art speech-to-text models, specifically Whisper, hold up on Sylheti and Chittagonian — Bengali varieties spoken daily by tens of millions but nearly absent from training data for mainstream ASR systems.',
-      linkLabel: null,
-      link: null,
+      'Sylheti is one of the prominent languages of Bangladesh and is spoken in the Sylhet region and parts of India. We collected over 29 hours of Sylheti audio via a face-to-face field survey and present dataset insights and linguistic/geographical challenges. The work includes deploying a state-of-the-art Bengali speech recognition model on Hugging Face Spaces that outperforms Google\'s STT API on Bengali benchmarks, illustrating the need for dialect-specific datasets for robust ASR performance.',
+    linkLabel: null,
+    link: null,
   },
   {
     tag: 'IN PROGRESS',
@@ -126,8 +127,6 @@ export const research = [
   },
 ]
 
-// Journal / Blog — placeholders. Swap these out as you actually write posts;
-// remove the `draft: true` flag once a post is real and linked.
 export const journal = [
   {
     date: 'Draft',

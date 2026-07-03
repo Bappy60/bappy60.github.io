@@ -36,9 +36,17 @@
 
   /* --- Light mode counterpoint --- */
   --color-light-background: #f7f9fb;
+  --color-light-surface: #ffffff;
+  --color-light-surface-dim: #f8fafc;
   --color-light-surface-container: #ffffff;
+  --color-light-surface-container-low: #f3f6fb;
+  --color-light-surface-container-high: #e2e8f0;
+  --color-light-surface-container-highest: #cbd5e1;
   --color-light-on-background: #191c1e;
+  --color-light-on-surface: #1f2937;
+  --color-light-on-surface-variant: #475569;
   --color-light-outline: #e2e8f0;
+  --color-light-outline-variant: #cbd5e1;
 
   /* --- Typography --- */
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
@@ -65,6 +73,88 @@ body {
 html.light body {
   background-color: var(--color-light-background);
   color: var(--color-light-on-background);
+  --color-background: var(--color-light-background);
+  --color-surface: var(--color-light-surface);
+  --color-surface-dim: var(--color-light-surface-dim);
+  --color-surface-container: var(--color-light-surface-container);
+  --color-surface-container-low: var(--color-light-surface-container-low);
+  --color-surface-container-high: var(--color-light-surface-container-high);
+  --color-surface-container-highest: var(--color-light-surface-container-highest);
+  --color-surface-variant: var(--color-light-outline);
+  --color-on-background: var(--color-light-on-background);
+  --color-on-surface: var(--color-light-on-surface);
+  --color-on-surface-variant: var(--color-light-on-surface-variant);
+  --color-outline: var(--color-light-outline);
+  --color-outline-variant: var(--color-light-outline-variant);
+}
+
+/* Force common utility classes to use light-mode tokens when `.light` is active. */
+html.light .bg-background,
+html.light .bg-surface,
+html.light .bg-surface-container,
+html.light .bg-surface-container-low,
+html.light .bg-surface-container-lowest,
+html.light .bg-surface-container-high,
+html.light .bg-surface-container-highest {
+  background-color: var(--color-surface) !important;
+  color: var(--color-on-surface) !important;
+}
+
+html.light .text-on-background,
+html.light .text-on-surface {
+  color: var(--color-on-surface) !important;
+}
+
+html.light .text-on-surface-variant,
+html.light .text-outline,
+html.light .text-on-surface-variant {
+  color: var(--color-on-surface-variant) !important;
+}
+
+html.light .border-surface-variant,
+html.light .border-outline-variant,
+html.light .border {
+  border-color: var(--color-outline) !important;
+}
+
+html.light nav,
+html.light .max-w-\[var\(--container-max-width\)\] {
+  background-color: var(--color-surface) !important;
+}
+
+html.light .bg-primary,
+html.light .text-primary {
+  color: var(--color-primary) !important;
+}
+
+/* Catch Tailwind utility classes that include suffixes like `/70` by matching class attribute substrings. */
+html.light [class*="bg-background"],
+html.light [class*="bg-surface"],
+html.light [class*="bg-primary"],
+html.light [class*="bg-outline"],
+html.light [class*="border-surface"],
+html.light [class*="border-outline"],
+html.light [class*="text-on-background"],
+html.light [class*="text-on-surface"],
+html.light [class*="text-outline"],
+html.light [class*="text-primary"] {
+  background-color: var(--color-surface) !important;
+  color: var(--color-on-surface) !important;
+  border-color: var(--color-outline) !important;
+}
+
+html.light [class*="border-primary/"],
+html.light [class*="border-primary"] {
+  border-color: var(--color-primary) !important;
+}
+
+.profile-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(75, 226, 119, 0.15);
+  background-color: rgba(75, 226, 119, 0.04);
 }
 
 ::selection {
