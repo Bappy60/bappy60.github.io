@@ -26,7 +26,14 @@ export const hero = {
   eyebrow: 'Software Engineer, Core Map Services',
   headline: ['Building the ', { text: 'infrastructure', accent: true }, ' beneath the map.'],
   subtext:
-    'I build open-source geospatial services — geocoding, routing, and map-data pipelines — as an alternative to closed map APIs. Alongside that, I research whether speech models built for standard Bengali actually work for the Sylheti and Chittagonian people speak at home.',
+    'A software engineer who cares as much about how a system works as whether it works — scalable, cost-aware, built to last.',
+}
+
+export const about = {
+  short:
+    'A software engineer who cares as much about how a system works as whether it works — scalable, cost-aware, built to last.',
+  long:
+    "I'm drawn to understanding how things work under the hood rather than just wiring APIs together — that curiosity is usually what leads to the more interesting engineering problems. I like finding solutions that are efficient, not just functional: shaving unnecessary cost and complexity out of a system rather than throwing more resources at it. I try to think in terms of overall system design — scalability, cloud infrastructure, and where open-source tools fit — rather than any one service in isolation. And I care about the parts of software that don't show up in a demo: clean interfaces, readable code, and documentation that actually helps the next person, because that's usually what decides whether a system holds up over time.",
 }
 
 // Reverse-chronological. `highlights` renders as a short bullet list.

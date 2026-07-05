@@ -47,6 +47,9 @@
   --color-light-on-surface-variant: #475569;
   --color-light-outline: #e2e8f0;
   --color-light-outline-variant: #cbd5e1;
+  --color-light-primary: #2563eb;
+  --color-light-on-primary: #ffffff;
+  --color-light-primary-container: #dbeafe;
 
   /* --- Typography --- */
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
@@ -61,6 +64,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 6rem;
 }
 
 body {
@@ -86,6 +93,9 @@ html.light body {
   --color-on-surface-variant: var(--color-light-on-surface-variant);
   --color-outline: var(--color-light-outline);
   --color-outline-variant: var(--color-light-outline-variant);
+  --color-primary: var(--color-light-primary);
+  --color-on-primary: var(--color-light-on-primary);
+  --color-primary-container: var(--color-light-primary-container);
 }
 
 /* Force common utility classes to use light-mode tokens when `.light` is active. */
@@ -125,6 +135,15 @@ html.light .max-w-\[var\(--container-max-width\)\] {
 html.light .bg-primary,
 html.light .text-primary {
   color: var(--color-primary) !important;
+}
+
+html.light .text-on-primary {
+  color: var(--color-on-primary) !important;
+}
+
+html.light .profile-photo {
+  border-color: rgba(37, 99, 235, 0.15) !important;
+  background-color: rgba(37, 99, 235, 0.04) !important;
 }
 
 /* Catch Tailwind utility classes that include suffixes like `/70` by matching class attribute substrings. */

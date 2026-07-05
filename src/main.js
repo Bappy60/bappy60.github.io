@@ -2,6 +2,7 @@ import './style.css'
 import {
   profile,
   hero,
+  about,
   experience,
   projects,
   research,
@@ -60,6 +61,12 @@ function renderHero() {
   document.getElementById('footer-github').href = profile.links.github
 }
 
+// ------------------------------- About ---------------------------------------
+function renderAbout() {
+  const copy = document.getElementById('about-copy')
+  if (copy) copy.textContent = about.long
+}
+
 // ----------------------------- Experience ------------------------------------
 function renderExperience() {
   const list = document.getElementById('experience-list')
@@ -111,18 +118,21 @@ function renderResearch() {
   research.forEach((item) => {
     const wrap = el('div', 'reveal border-l-2 border-surface-variant hover:border-primary pl-8 transition-all py-2')
     wrap.append(el('span', 'font-mono text-xs text-primary mb-2 block', item.tag))
-    wrap.append(el('h3', 'font-mono text-lg text-on-background mb-3', item.title))
+
+    if (item.link) {
+      const titleLink = el('a', 'font-mono text-lg text-on-background mb-3 block hover:text-primary transition-colors', item.title)
+      titleLink.href = item.link
+      titleLink.target = '_blank'
+      titleLink.rel = 'noopener'
+      wrap.append(titleLink)
+    } else {
+      wrap.append(el('h3', 'font-mono text-lg text-on-background mb-3', item.title))
+    }
+
     if (item.status) {
       wrap.append(el('p', 'font-mono text-[11px] uppercase tracking-widest text-outline mb-3', item.status))
     }
     wrap.append(el('p', 'text-on-surface-variant', item.description))
-    if (item.link) {
-      const link = el('a', 'font-mono text-xs text-primary hover:text-primary/80 underline mt-3 block', item.linkLabel || 'Read more')
-      link.href = item.link
-      link.target = '_blank'
-      link.rel = 'noopener'
-      wrap.append(link)
-    }
     list.append(wrap)
   })
 }
@@ -137,7 +147,17 @@ function renderBlog() {
       dateRow.append(el('span', 'font-mono text-[10px] text-primary border border-primary/40 px-1.5 py-0.5', 'DRAFT'))
     }
     wrap.append(dateRow)
-    wrap.append(el('h4', 'font-semibold text-on-background mb-1', post.title))
+
+    if (post.link) {
+      const titleLink = el('a', 'font-semibold text-on-background mb-1 block hover:text-primary transition-colors', post.title)
+      titleLink.href = post.link
+      titleLink.target = '_blank'
+      titleLink.rel = 'noopener'
+      wrap.append(titleLink)
+    } else {
+      wrap.append(el('h4', 'font-semibold text-on-background mb-1', post.title))
+    }
+
     wrap.append(el('p', 'text-sm text-on-surface-variant', post.excerpt))
     list.append(wrap)
   })
@@ -248,6 +268,7 @@ function initScrollReveal() {
 // --------------------------------- Init ---------------------------------------------
 function init() {
   renderHero()
+  renderAbout()
   renderExperience()
   renderProjects()
   renderResearch()
