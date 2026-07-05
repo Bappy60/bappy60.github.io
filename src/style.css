@@ -130,14 +130,12 @@ html.light .text-primary {
 /* Catch Tailwind utility classes that include suffixes like `/70` by matching class attribute substrings. */
 html.light [class*="bg-background"],
 html.light [class*="bg-surface"],
-html.light [class*="bg-primary"],
 html.light [class*="bg-outline"],
 html.light [class*="border-surface"],
 html.light [class*="border-outline"],
 html.light [class*="text-on-background"],
 html.light [class*="text-on-surface"],
-html.light [class*="text-outline"],
-html.light [class*="text-primary"] {
+html.light [class*="text-outline"] {
   background-color: var(--color-surface) !important;
   color: var(--color-on-surface) !important;
   border-color: var(--color-outline) !important;
@@ -146,6 +144,21 @@ html.light [class*="text-primary"] {
 html.light [class*="border-primary/"],
 html.light [class*="border-primary"] {
   border-color: var(--color-primary) !important;
+}
+
+button,
+a.transition-all {
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+button:active,
+a.transition-all:active {
+  transform: scale(0.98);
+}
+
+a.transition-all:hover {
+  filter: brightness(1.05);
 }
 
 .profile-photo {

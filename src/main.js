@@ -5,7 +5,7 @@ import {
   experience,
   projects,
   research,
-  journal,
+  blogPosts,
   currentlyFocused,
   skills,
   education,
@@ -117,9 +117,9 @@ function renderResearch() {
   })
 }
 
-function renderJournal() {
-  const list = document.getElementById('journal-list')
-  journal.forEach((post) => {
+function renderBlog() {
+  const list = document.getElementById('blog-list')
+  blogPosts.forEach((post) => {
     const wrap = el('div', 'reveal')
     const dateRow = el('div', 'flex items-center gap-2 mb-2')
     dateRow.append(el('span', 'font-mono text-xs text-outline', post.date))
@@ -241,7 +241,7 @@ function init() {
   renderExperience()
   renderProjects()
   renderResearch()
-  renderJournal()
+  renderBlog()
   renderCurrently()
   renderSkills()
   renderEducation()

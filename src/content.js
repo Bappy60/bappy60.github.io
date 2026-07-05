@@ -127,7 +127,7 @@ export const research = [
   },
 ]
 
-export const journal = [
+export const blogPosts = [
   {
     date: 'Published',
     title: 'Understanding Lucene — the engine behind Elasticsearch\'s magic',
