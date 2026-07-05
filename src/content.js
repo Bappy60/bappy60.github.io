@@ -32,8 +32,8 @@ export const hero = {
 // Reverse-chronological. `highlights` renders as a short bullet list.
 export const experience = [
   {
-    company: 'Core Map Services',
-    role: 'Software Engineer',
+    company: 'Technonext Software Limited',
+    role: 'Software Engineer (Mid)',
     period: 'July 2025 — Present',
     location: 'Dhaka, Bangladesh',
     highlights: [
@@ -45,8 +45,8 @@ export const experience = [
     ],
   },
   {
-    company: 'Engineering Platform Team',
-    role: 'Software Engineer',
+    company: 'Vivasoft Limited',
+    role: 'Software Engineer (L-1)',
     period: 'March 2024 — July 2025',
     location: 'Dhaka, Bangladesh',
     highlights: [
@@ -58,7 +58,7 @@ export const experience = [
     ],
   },
   {
-    company: 'Platform Engineering',
+    company: 'Vivasoft Limited',
     role: 'Associate Software Engineer',
     period: 'February 2023 — March 2024',
     location: 'Dhaka, Bangladesh',
@@ -128,6 +128,12 @@ export const research = [
 ]
 
 export const journal = [
+  {
+    date: 'Published',
+    title: 'Understanding Lucene — the engine behind Elasticsearch\'s magic',
+    excerpt: 'Technical article on how Lucene powers Elasticsearch and indexing/search fundamentals.',
+    link: 'https://dev.to/heisenberg60/understanding-lucene-the-engine-behind-elasticsearchs-magic-4ke8',
+  },
   {
     date: 'Draft',
     title: 'What Whisper Gets Wrong About Sylheti',
