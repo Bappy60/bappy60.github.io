@@ -19,12 +19,23 @@ export const profile = {
   currentStatus: 'Software Engineer — Core Map Services',
   photo: '/profile.jpg',
   photoAlt: 'Profile photo',
-  coreInterests: ['Geospatial Systems', 'Distributed Systems', 'Low-Resource NLP'],
+  coreInterests: [
+    'Geospatial Systems',
+    'Distributed Systems',
+    'Cloud Infrastructure',
+    'LLMs & ML Ops',
+    'Observability',
+  ],
 }
 
 export const hero = {
-  eyebrow: 'Software Engineer, Core Map Services',
-  headline: ['Building the ', { text: 'infrastructure', accent: true }, ' beneath the map.'],
+  eyebrow: 'Software Engineer & Researcher',
+  headline: [
+    'Building things that ',
+    { text: 'work', accent: true },
+    ' — and ',
+    { text: 'understanding why.', accent: true },
+  ],
   subtext:
     'A software engineer who cares as much about how a system works as whether it works — scalable, cost-aware, built to last.',
 }
@@ -114,7 +125,6 @@ export const projects = [
   },
 ]
 
-// Research: real academic work — no placeholders here on purpose.
 export const research = [
   {
     tag: 'B.Sc. THESIS — SUST',
@@ -137,9 +147,11 @@ export const blogPosts = [
 ]
 
 export const currentlyFocused = [
-  'Automated triage for RouteIQ map-divergence QA — classifying root causes instead of reviewing by hand.',
-  'Elastic APM observability across RouteIQ services (Go): centralized instrumentation, slog trace correlation, Redis/RabbitMQ hooks.',
-  'Reframing dialectal Bengali STT thesis work for workshop submission and international scholarship applications (SI Sweden, DAAD EPOS, RTP Australia).',
+  'Learning Kubernetes and local distributed systems tooling to understand production orchestration better.',
+  'Exploring local LLM workflows and inference trade-offs for private model experimentation.',
+  'Working with distributed tracing to make service behavior and failure modes more visible.',
+  'Looking for a research direction that combines systems design, observability, and practical impact.',
+  'Seeking open source contributions that improve tooling, reliability, or developer experience.',
 ]
 
 export const skills = {
