@@ -112,7 +112,17 @@ function renderResearch() {
     const wrap = el('div', 'reveal border-l-2 border-surface-variant hover:border-primary pl-8 transition-all py-2')
     wrap.append(el('span', 'font-mono text-xs text-primary mb-2 block', item.tag))
     wrap.append(el('h3', 'font-mono text-lg text-on-background mb-3', item.title))
+    if (item.status) {
+      wrap.append(el('p', 'font-mono text-[11px] uppercase tracking-widest text-outline mb-3', item.status))
+    }
     wrap.append(el('p', 'text-on-surface-variant', item.description))
+    if (item.link) {
+      const link = el('a', 'font-mono text-xs text-primary hover:text-primary/80 underline mt-3 block', item.linkLabel || 'Read more')
+      link.href = item.link
+      link.target = '_blank'
+      link.rel = 'noopener'
+      wrap.append(link)
+    }
     list.append(wrap)
   })
 }

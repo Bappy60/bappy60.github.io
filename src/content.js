@@ -114,16 +114,9 @@ export const research = [
     title: 'Bridging the Gap: Evaluating State-of-the-Art Speech-to-Text Models for Sylheti Dialect and Introducing a Bengali Speech-to-Text API',
     description:
       'Sylheti is one of the prominent languages of Bangladesh and is spoken in the Sylhet region and parts of India. We collected over 29 hours of Sylheti audio via a face-to-face field survey and present dataset insights and linguistic/geographical challenges. The work includes deploying a state-of-the-art Bengali speech recognition model on Hugging Face Spaces that outperforms Google\'s STT API on Bengali benchmarks, illustrating the need for dialect-specific datasets for robust ASR performance.',
-    linkLabel: null,
-    link: null,
-  },
-  {
-    tag: 'IN PROGRESS',
-    title: 'Automated Divergence Triage for Map Routing',
-    description:
-      'At RouteIQ, building classifiers that triage routing divergences against Google Maps into stale PBF data, missing geometry, tagging errors, and routing-profile mismatches — reducing reliance on slow manual review.',
-    linkLabel: null,
-    link: null,
+    status: 'Not published',
+    linkLabel: 'View thesis',
+    link: 'https://drive.google.com/file/d/1OrFJ4eS3JBmK20FSE7RUTGYUeCW_qJfq/view?usp=sharing',
   },
 ]
 
@@ -133,27 +126,6 @@ export const blogPosts = [
     title: 'Understanding Lucene — the engine behind Elasticsearch\'s magic',
     excerpt: 'Technical article on how Lucene powers Elasticsearch and indexing/search fundamentals.',
     link: 'https://dev.to/heisenberg60/understanding-lucene-the-engine-behind-elasticsearchs-magic-4ke8',
-  },
-  {
-    date: 'Draft',
-    title: 'What Whisper Gets Wrong About Sylheti',
-    excerpt:
-      'Notes from a thesis: where a state-of-the-art ASR model quietly fails on a dialect it was never shown.',
-    draft: true,
-  },
-  {
-    date: 'Draft',
-    title: 'Diagnosing a Map, Automatically',
-    excerpt:
-      'Turning slow manual QA into a classifier: stale data vs. missing geometry vs. a bad routing profile.',
-    draft: true,
-  },
-  {
-    date: 'Draft',
-    title: 'CPU Contention on a Shared ASG, and How We Found It',
-    excerpt:
-      'A production incident on RouteIQ, an osrm-bicycle container, and what Grafana/Loki showed once we knew where to look.',
-    draft: true,
   },
 ]
 
